@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.imac.tempconverter2.MainActivity">
+
+
+<!-- Text view to display the celcius convertion -->
+    <TextView android:id="@+id/textview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- add View as gap for 4 blank lines -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:id="@+id/view">
+    </View>
+
+    <!--SeekBar To drag the Calcius from 0 To positiva or negetive-->
+    <SeekBar android:id="@+id/seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:minWidth="250dp"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <!--CheckBox to display the 5 day forcast, a listner is been set for this seekbar at the backend-->
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Main_data"
+        android:layout_below="@+id/seekbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="49dp" />
+
+    <!--TextBox to display the farihnet conversion-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="99dp"
+        android:id="@+id/textView2" />
+
+    <!--View Stub to load the Child view in the next page-->
+    <ViewStub
+        android:id="@+id/viewStub1"
+        android:layout="@layout/stubview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
